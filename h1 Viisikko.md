@@ -62,4 +62,31 @@ Kun ajaa komennon $ sudo salt-call --local -l info state.single file.managed /tm
 
 <img width="393" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/78877f99-011d-4a23-bcb3-562ece2df995">
 
+$ sudo salt-call --local -l info state.single file.absent /tmp/filetesti , jos kyseistä tiedostoa ei pidä olla enään olemassa.
+
+service.running: Käytetään, kun halutaan varmistaa palvelun pysyminen käynnissä tai suljettuna.
+
+Toimii komennoila 
+
+ $ sudo salt-call --local -l info state.single service.running apache2 enable=True
+
+$ sudo salt-call --local -l info state.single service.dead apache2 enable=False
+
+user.present: Varmistaa, että komennolle annettu käyttäjä on olemassa. Jos ei ole, se luodaan.
+
+$ sudo salt-call --local -l info state.single user.present akkuut
+ 
+Koska koneella ei ole akkuut käyttäjää, sellainen tehtiin.
+
+<img width="391" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/184e4157-3423-4fb8-a4d6-57d6c3c22259">
+
+<img width="196" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/47a094be-1553-442a-9e3c-dba5ca260744">
+
+$ sudo salt-call --local -l info state.single user.absent akkuut
+
+Varmistaa, että akkuut käyttäjää ei ole olemassa. Ei kuitenkaan poista akkuut:tia pois kotihakemistosta.
+
+cmd.run: Ajaa komentoja
+
+
 
