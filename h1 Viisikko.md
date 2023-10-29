@@ -34,3 +34,12 @@ jotka löytyivät kurssin sivuilta. https://terokarvinen.com/2023/configuration-
 
 <img width="392" alt="Näyttökuva 2023-10-29 212355" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/fb67a69e-d07c-4823-be7e-f8d0d313adcc">
 
+## b) Viisi tärkeintä. Näytä esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
+
+pkg: pkg:n mukaan sovelluksen pitäisi olla asennettuna tai poistettuna koneelta. Kun pkg.installed ajetaan ensimmäisen kerran, eikä koneella ole sille annettua sovellusta, se ladataan. pkg.removed on sama, mutta toistepäin.
+
+Käytin komentoa sudo salt-call --local -l info state.single pkg.installed tree, joka tarkastaa onko tree asennettuna. 
+
+<img width="329" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/f0087c3d-d029-4459-a617-c8130b62f18f">
+
+Se ei ollut koneellani, joten se asennettiin, ja samalla tila muuttui (changed=1)
