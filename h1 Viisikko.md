@@ -36,10 +36,30 @@ jotka löytyivät kurssin sivuilta. https://terokarvinen.com/2023/configuration-
 
 ## b) Viisi tärkeintä. Näytä esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
 
-pkg: pkg:n mukaan sovelluksen pitäisi olla asennettuna tai poistettuna koneelta. Kun pkg.installed ajetaan ensimmäisen kerran, eikä koneella ole sille annettua sovellusta, se ladataan. pkg.removed on sama, mutta toistepäin.
+pkg.installed: Sen mukaan sovelluksen pitäisi olla asennettuna tai poistettuna koneelta. Kun pkg.installed ajetaan ensimmäisen kerran, eikä koneella ole sille annettua sovellusta, se ladataan. pkg.removed on sama, mutta toistepäin.
 
 Käytin komentoa sudo salt-call --local -l info state.single pkg.installed tree, joka tarkastaa onko tree asennettuna. 
 
 <img width="329" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/f0087c3d-d029-4459-a617-c8130b62f18f">
 
 Se ei ollut koneellani, joten se asennettiin, ja samalla tila muuttui (changed=1)
+
+file.managed: Varmistaa, että koneelta löytyy komennolle annettu tiedosto.
+
+ajoin komennon $ sudo salt-call --local -l info state.single file.managed /tmp/filetesti , joka katsoo, onko koneella /tmp/filetesti tiedostoa.
+
+<img width="233" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/4146b19c-dd06-4218-95d8-0d078d1059d5">
+
+Kun etsii kyseisen tiedoston, niin se löytyy
+
+ $ less /tmp/filetesti
+
+ <img width="389" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ac28e23e-0f76-4003-ae40-3608c24177cf">
+
+Tiedoston sisältöä voi myös muuttaa lisäämällä file.managed komennon perään "contents="muokkaus"
+
+Kun ajaa komennon $ sudo salt-call --local -l info state.single file.managed /tmp/filetesti contents="muokkaus", niin tiedosto näyttää tältä.
+
+<img width="393" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/78877f99-011d-4a23-bcb3-562ece2df995">
+
+
