@@ -36,7 +36,7 @@ jotka löytyivät kurssin sivuilta. https://terokarvinen.com/2023/configuration-
 
 ## b) Viisi tärkeintä. Näytä esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
 
-pkg.installed: Sen mukaan sovelluksen pitäisi olla asennettuna tai poistettuna koneelta. Kun pkg.installed ajetaan ensimmäisen kerran, eikä koneella ole sille annettua sovellusta, se ladataan. pkg.removed on sama, mutta toistepäin.
+pkg.installed: Sen mukaan sovelluksen pitäisi olla asennettuna tai poistettuna koneelta. Kun pkg.installed ajetaan ensimmäisen kerran, eikä koneella ole sille annettua sovellusta, se ladataan. pkg.removed on sama, mutta toisinpäin.
 
 Käytin komentoa sudo salt-call --local -l info state.single pkg.installed tree, joka tarkastaa onko tree asennettuna. 
 
