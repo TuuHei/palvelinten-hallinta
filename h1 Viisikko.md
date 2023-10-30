@@ -44,7 +44,7 @@ Käytin komentoa "$ sudo salt-call --local -l info state.single pkg.installed tr
 
 Se ei ollut koneellani, joten se asennettiin, ja samalla tila muuttui (changed=1)
 
-file.managed: Varmistaa, että koneelta löytyy komennolle annettu tiedosto.
+**file.managed:** Varmistaa, että koneelta löytyy komennolle annettu tiedosto.
 
 ajoin komennon $ sudo salt-call --local -l info state.single file.managed /tmp/filetesti , joka katsoo, onko koneella /tmp/filetesti tiedostoa.
 
@@ -64,7 +64,7 @@ Kun ajaa komennon $ sudo salt-call --local -l info state.single file.managed /tm
 
 $ sudo salt-call --local -l info state.single file.absent /tmp/filetesti , jos kyseistä tiedostoa ei pidä olla enään olemassa.
 
-service.running: Käytetään, kun halutaan varmistaa palvelun pysyminen käynnissä tai suljettuna.
+**service.running:** Käytetään, kun halutaan varmistaa palvelun pysyminen käynnissä tai suljettuna.
 
 Toimii komennoila 
 
@@ -74,7 +74,7 @@ Toimii komennoila
 
 Jos kyseessä apache2
 
-user.present: Varmistaa, että komennolle annettu käyttäjä on olemassa. Jos ei ole, se luodaan.
+**user.present:** Varmistaa, että komennolle annettu käyttäjä on olemassa. Jos ei ole, se luodaan.
 
 $ sudo salt-call --local -l info state.single user.present akkuut
  
@@ -88,7 +88,7 @@ $ sudo salt-call --local -l info state.single user.absent akkuut
 
 Varmistaa, että akkuut käyttäjää ei ole olemassa. Ei kuitenkaan poista akkuut:tia pois kotihakemistosta.
 
-cmd.run: Ajaa komentoja. Käytetään, kun halutaan tehdä muutoksia. Testasing itse:
+**cmd.run:** Ajaa komentoja. Käytetään, kun halutaan tehdä muutoksia. Testasing itse:
 
  $ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/kukko' creates="/tmp/kukko"
 
