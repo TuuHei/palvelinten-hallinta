@@ -112,7 +112,7 @@ Esimerkiksi, jos ajan jo aikaisemmin ajetun komennon:
 
  <img width="305" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/31059bac-34a3-4992-9f5f-cc3575ad759d">
 
-Kuten kuvassa näkyy, tree oli ladattuna jo koneelle, eikä muutoksia tarvittu. Jos kuitenkin ajaa komennon, jossa tree pitää olla poistettuna, niin joudutaan taas pois idempotenssista.
+Kuten kuvassa näkyy, tree oli jo ladattuna koneelle, eikä muutoksia tarvittu. Jos kuitenkin ajaa komennon, jossa tree pitää olla poistettuna, niin joudutaan taas pois idempotenssista.
 
  $ sudo salt-call --local -l info state.single pkg.removed tree
 
