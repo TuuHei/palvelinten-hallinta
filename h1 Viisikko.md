@@ -141,3 +141,5 @@ Sekä käyttöjärjestelmän tiedot:
 <img width="117" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/5383fd94-1d59-4813-8851-786deb5b5620">
 
 Kaikenkaikkiaan mukavasti pakattu lista järjestelmän tiedoista.
+
+Käyttämäni komennot löysin sivulta: https://terokarvinen.com/2023/configuration-management-2023-autumn/
