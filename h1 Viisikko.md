@@ -38,7 +38,7 @@ jotka löytyivät kurssin sivuilta. https://terokarvinen.com/2023/configuration-
 
 pkg.installed: Sen mukaan sovelluksen pitäisi olla asennettuna tai poistettuna koneelta. Kun pkg.installed ajetaan ensimmäisen kerran, eikä koneella ole sille annettua sovellusta, se ladataan. pkg.removed on sama, mutta toisinpäin.
 
-Käytin komentoa sudo salt-call --local -l info state.single pkg.installed tree, joka tarkastaa onko tree asennettuna. 
+Käytin komentoa "$ sudo salt-call --local -l info state.single pkg.installed tree", joka tarkastaa onko tree asennettuna. 
 
 <img width="329" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/f0087c3d-d029-4459-a617-c8130b62f18f">
 
