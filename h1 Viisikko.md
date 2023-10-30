@@ -118,7 +118,7 @@ Kuten kuvassa näkyy, tree oli jo ladattuna koneelle, eikä muutoksia tarvittu. 
 
  <img width="246" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/87a0b999-3af0-46bb-a8fd-9f42ddc2280e">
 
-Muutoksia piti tehdä, joten ei oltu enään idempotenssisessa tilassa. Jos komennon ajaa uudelleen, pästään taas idempotenssiin.
+Muutoksia piti tehdä, joten ei oltu enään idempotenssisessa tilassa. Jos komennon ajaa uudelleen, päästään taas idempotenssiin.
 
 <img width="290" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/713a5423-f3b8-49e0-b81c-e4f443d788a2">
 
