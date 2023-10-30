@@ -86,7 +86,54 @@ $ sudo salt-call --local -l info state.single user.absent akkuut
 
 Varmistaa, että akkuut käyttäjää ei ole olemassa. Ei kuitenkaan poista akkuut:tia pois kotihakemistosta.
 
-cmd.run: Ajaa komentoja
+cmd.run: Ajaa komentoja. Käytetään, kun halutaan tehdä muutoksia. Testasing itse:
 
+ $ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/kukko' creates="/tmp/kukko"
 
+Nyt /tmp/kukko tiedosto pitää tehdä.
 
+<img width="251" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/54d1abf9-e0fa-43a8-988c-2896e5bb608e">
+
+<img width="266" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/f1feeb20-2c10-48bc-a1c6-bafa8b812b32">
+
+## c) Idempotentti. Anna esimerkki idempotenssista. Aja 'salt-call --local' komentoja, analysoi tulokset, selitä miten idempotenssi ilmenee.
+
+Käytän idempotenssi esimerkkinä aikaisemmassa tehtävässä ladattua tree:tä. Idempotenssiin päästään, kun komento ajetaan, eikä muutoksia tarvitse tehdä. 
+
+Esimerkiksi, jos ajan jo aikaisemmin ajetun komennon:
+
+ $ sudo salt-call --local -l info state.single pkg.installed tree
+
+ Muutoksia ei pitäisi tulla.
+
+ <img width="305" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/31059bac-34a3-4992-9f5f-cc3575ad759d">
+
+Kuten kuvassa näkyy, tree oli ladattuna jo koneelle, eikä muutoksia tarvittu. Jos kuitenkin ajaa komennon, jossa tree pitää olla poistettuna, niin joudutaan taas pois idempotenssista.
+
+ $ sudo salt-call --local -l info state.single pkg.removed tree
+
+ <img width="246" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/87a0b999-3af0-46bb-a8fd-9f42ddc2280e">
+
+Muutoksia piti tehdä, joten ei oltu enään idempotenssisessa tilassa. Jos komennon ajaa uudelleen, pästään taas idempotenssiin.
+
+<img width="290" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/713a5423-f3b8-49e0-b81c-e4f443d788a2">
+
+d) Tietoa koneesta. Kerää tietoja koneesta Saltin grains.items -tekniikalla. Poimi kolme kiinnostavaa kohtaa, näytä tulokset ('grains.item osfinger virtual') ja analysoi ne.
+
+Ajamalla komennon "$ sudo salt-call --local grains.items" sain pitkän listan koneen tiedoista.
+
+<img width="400" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/fa290ee9-7d94-49c0-9c25-b6587a2f080e">
+
+En ollut aikaisemmin juuri tutkinut oman kannettavan komponentteja, joten prosessori kohta pisti silmään.
+
+<img width="238" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/477eed66-1684-4c42-8763-ea2c5e9c07e8">
+
+Sitä kautta löytyi myös virtuaalikoneelleni antamat asetukset:
+
+<img width="121" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/fd61cc4d-bbf3-4e49-b1dc-31f35dbb1a8c">
+
+Sekä käyttöjärjestelmän tiedot:
+
+<img width="117" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/5383fd94-1d59-4813-8851-786deb5b5620">
+
+Kaikenkaikkiaan mukavasti pakattu lista järjestelmän tiedoista.
