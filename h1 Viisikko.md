@@ -98,6 +98,8 @@ Nyt /tmp/kukko tiedosto pitää tehdä.
 
 <img width="266" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/f1feeb20-2c10-48bc-a1c6-bafa8b812b32">
 
+Käytin annettuja komentoja osoitteesta: https://terokarvinen.com/2021/salt-run-command-locally/
+
 ## c) Idempotentti. Anna esimerkki idempotenssista. Aja 'salt-call --local' komentoja, analysoi tulokset, selitä miten idempotenssi ilmenee.
 
 Käytän idempotenssi esimerkkinä aikaisemmassa tehtävässä ladattua tree:tä. Idempotenssiin päästään, kun komento ajetaan, eikä muutoksia tarvitse tehdä. 
