@@ -70,7 +70,9 @@ Toimii komennoila
 
  $ sudo salt-call --local -l info state.single service.running apache2 enable=True
 
-$ sudo salt-call --local -l info state.single service.dead apache2 enable=False
+ $ sudo salt-call --local -l info state.single service.dead apache2 enable=False
+
+Jos kyseessä apache2
 
 user.present: Varmistaa, että komennolle annettu käyttäjä on olemassa. Jos ei ole, se luodaan.
 
