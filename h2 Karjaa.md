@@ -29,4 +29,7 @@ Ladataan Vagrantin Windows versio sivulta: https://developer.hashicorp.com/vagra
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ca17a1c4-51ee-4026-9fea-db709c46b55e)
 
-![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/d899d198-d348-4f78-82fa-c7334e2ce0fc)
+Odotetaan, että se on asentunut
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/fc84354f-3272-4278-b614-ed2d2d297875)
+
