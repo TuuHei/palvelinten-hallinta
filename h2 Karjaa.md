@@ -39,5 +39,32 @@ Ensin luodaan virtuaalikone komennolla  'vagrant init debian/bullseye64'.
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ee979c87-3411-425f-b7b3-6091bbe8702a)
 
+Varmistetaan että VagrantFile on luotu.
+
+  $ dir
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/76b1348f-c437-4699-b805-6f9877f5f168)
+
+Tiedosto löytyy, joten käynnistetään virtuaalikone.
+
+  $ vagrant up
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/eae506a6-fc13-45ea-b004-5e40c086ee70)
+
+Uusi virtuaalikone on luotu VirtualBoxiin.
+
+Otetaan seuraavaksi yhteys virtuaalikoneeseen 
+
+  $ vagrant ssh
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/f3fb2258-2ec5-4b55-8ea8-4bb25af8e69e)
+
+Osoitetaan vielä, että nettiyhteys toimii. 
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/340dd663-492b-4fbc-a2c9-9891dea9d80d)
+
+Näyttää toimivan.
+
+Apuna käytin sivua: https://terokarvinen.com/2017/04/11/vagrant-revisited-install-boot-new-virtual-machine-in-31-seconds/
 
 
