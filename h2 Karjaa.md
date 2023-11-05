@@ -111,3 +111,4 @@ Molemmat ovat aktiivisia.
 
 Apuna käytin: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/
 
+## d) Asenna Saltin herra-orja arkkitehtuuri toimimaan verkon yli
