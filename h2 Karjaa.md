@@ -35,7 +35,9 @@ Odotetaan, että se on asentunut ja käynnistetään kone uudelleen.
 
 ## b) Yksi maankiertäjä. Asenna yksi kone Vagrantilla, ota siihen SSH-yhteys, osoita että netti toimii.
 
-Ensin luodaan virtuaalikone komennolla  'vagrant init debian/bullseye64'. 
+Ensin luodaan virtuaalikone. 
+
+  $ vagrant init debian/bullseye64
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ee979c87-3411-425f-b7b3-6091bbe8702a)
 
@@ -65,6 +67,43 @@ Osoitetaan vielä, että nettiyhteys toimii.
 
 Näyttää toimivan.
 
+Lopuksi poistan virtuaalikoneen.
+
+  $ exit
+  $ vagrant destroy
+
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/6df40a23-9f88-4b6b-9132-c51228e29d81)
+
+
 Apuna käytin sivua: https://terokarvinen.com/2017/04/11/vagrant-revisited-install-boot-new-virtual-machine-in-31-seconds/
 
+## c) Oma orjansa. Asenna Salt herra ja orja samalle koneelle
+
+Luodaan uusi kone ja otetaan siihen yhteys samalla tavalla, kuin aikaisemmassa tehtävässä.
+
+  $ vagrant init debian/bullseye64
+  $ vagrant up
+  $ vagrant ssh
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/8687bf8a-0a83-419a-ae0b-d432485484cf)
+
+Seuraavaksi luodaan herra ja orja.
+
+  $ sudo apt-get update
+  $ sudo apt-get -y install salt-master
+  $ sudo apt-get -y install salt-minion
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/76e9641f-f1d4-4013-a7c4-aba8e78fa59f)
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/4a541cc6-6cf9-4bea-a125-16637bb407f5)
+
+Tarkastetaan vielä, että molemmat toimivat.
+
+  $ sudo service salt-master status
+  $ sudo service salt-minion status
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/470e8e3e-4192-4ab2-ab4f-eb3230a9f54d)
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/0fb5a488-9a91-471d-99ff-dcd0d687b6a6)
 
