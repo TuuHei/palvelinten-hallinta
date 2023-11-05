@@ -29,7 +29,15 @@ Ladataan Vagrantin Windows versio sivulta: https://developer.hashicorp.com/vagra
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ca17a1c4-51ee-4026-9fea-db709c46b55e)
 
-Odotetaan, että se on asentunut
+Odotetaan, että se on asentunut ja käynnistetään kone uudelleen.
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/fc84354f-3272-4278-b614-ed2d2d297875)
+
+## b) Yksi maankiertäjä. Asenna yksi kone Vagrantilla, ota siihen SSH-yhteys, osoita että netti toimii.
+
+Ensin luodaan virtuaalikone komennolla  'vagrant init debian/bullseye64'. 
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ee979c87-3411-425f-b7b3-6091bbe8702a)
+
+
 
