@@ -22,3 +22,10 @@ Lähde: https://terokarvinen.com/2017/04/11/vagrant-revisited-install-boot-new-v
 * 
 
 Lähde: https://terokarvinen.com/2023/salt-vagrant/
+
+## a) Asenna Vagrant
+
+Ladataan Vagrantin Windows versio sivulta: https://developer.hashicorp.com/vagrant/downloads.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ca17a1c4-51ee-4026-9fea-db709c46b55e)
+
