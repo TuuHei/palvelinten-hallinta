@@ -70,6 +70,7 @@ Näyttää toimivan.
 Lopuksi poistan virtuaalikoneen.
 
   $ exit
+  
   $ vagrant destroy
 
 
@@ -83,7 +84,9 @@ Apuna käytin sivua: https://terokarvinen.com/2017/04/11/vagrant-revisited-insta
 Luodaan uusi kone ja otetaan siihen yhteys samalla tavalla, kuin aikaisemmassa tehtävässä.
 
   $ vagrant init debian/bullseye64
+  
   $ vagrant up
+  
   $ vagrant ssh
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/8687bf8a-0a83-419a-ae0b-d432485484cf)
@@ -91,7 +94,9 @@ Luodaan uusi kone ja otetaan siihen yhteys samalla tavalla, kuin aikaisemmassa t
 Seuraavaksi luodaan herra ja orja.
 
   $ sudo apt-get update
+  
   $ sudo apt-get -y install salt-master
+  
   $ sudo apt-get -y install salt-minion
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/76e9641f-f1d4-4013-a7c4-aba8e78fa59f)
@@ -101,9 +106,15 @@ Seuraavaksi luodaan herra ja orja.
 Tarkastetaan vielä, että molemmat toimivat.
 
   $ sudo service salt-master status
+  
   $ sudo service salt-minion status
 
-![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/470e8e3e-4192-4ab2-ab4f-eb3230a9f54d)
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ff3e1c54-b0c3-4698-bcac-c6b22bbc5439)
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/0fb5a488-9a91-471d-99ff-dcd0d687b6a6)
+
+Molemmat ovat aktiivisia.
+
+Apuna käytin: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/
+
 
