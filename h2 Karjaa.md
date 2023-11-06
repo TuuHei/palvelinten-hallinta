@@ -241,6 +241,8 @@ Kopioin ohjeista init.sls tiedoston sisällön ja liitän ne omaan tiedostoon.
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/de8dd3fa-bc6c-41f4-a8c6-f42bd894645b)
 
+Tämä luo uuden tiedoston hakemistoon /tmp.
+
 Seuraavaksi ajoin tiedoston.
 
     $ sudo salt '*' state.apply hello
