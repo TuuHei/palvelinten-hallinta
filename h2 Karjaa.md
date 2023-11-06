@@ -37,19 +37,19 @@ Odotetaan, että se on asentunut ja käynnistetään kone uudelleen.
 
 Ensin luodaan virtuaalikone. 
 
-    $ vagrant init debian/bullseye64
+    vagrant init debian/bullseye64
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ee979c87-3411-425f-b7b3-6091bbe8702a)
 
 Varmistetaan että VagrantFile on luotu.
 
-    $ dir
+    dir
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/76b1348f-c437-4699-b805-6f9877f5f168)
 
 Tiedosto löytyy, joten käynnistetään virtuaalikone.
 
-    $ vagrant up
+    vagrant up
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/eae506a6-fc13-45ea-b004-5e40c086ee70)
 
@@ -57,7 +57,7 @@ Uusi virtuaalikone on luotu VirtualBoxiin.
 
 Otetaan seuraavaksi yhteys virtuaalikoneeseen 
 
-    $ vagrant ssh
+    vagrant ssh
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/f3fb2258-2ec5-4b55-8ea8-4bb25af8e69e)
 
@@ -70,7 +70,7 @@ Näyttää toimivan.
 Lopuksi poistan virtuaalikoneen.
 
     $ exit
-    $vagrant destroy
+    vagrant destroy
 
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/6df40a23-9f88-4b6b-9132-c51228e29d81)
@@ -82,9 +82,9 @@ Apuna käytin sivua: https://terokarvinen.com/2017/04/11/vagrant-revisited-insta
 
 Luodaan uusi kone ja otetaan siihen yhteys samalla tavalla, kuin aikaisemmassa tehtävässä.
 
-    $ vagrant init debian/bullseye64
-    $ vagrant up
-    $ vagrant ssh
+    vagrant init debian/bullseye64
+    vagrant up
+    vagrant ssh
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/8687bf8a-0a83-419a-ae0b-d432485484cf)
 
@@ -130,7 +130,7 @@ Sain luotua uuden tekstitiedoston, johon kopioin valmiin Vagrantfile pohjan, jok
 
 Seuraavaksi jatkoin annetuilla ohjeilla, eli
 
-        $ vagrant up
+        vagrant up
 
 Kaikki sujui hyvin ja sain virtuaalikoneet tehtyä.
 
@@ -138,8 +138,24 @@ Kaikki sujui hyvin ja sain virtuaalikoneet tehtyä.
 
 Seuraavaksi otetaan ssh yhteys masteriin.
 
-        $ vagrant ssh tmaster
+        vagrant ssh tmaster
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/bdae34b8-3ca4-4a62-8fa2-6c44ca2bfd24)
+
+Hyväksytään orjakoneiden avaimet.
+
+        $ sudo salt-key -A
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/66e8e21c-b10f-49c6-9039-72f02922ab0b)
+
+Ja kokeillaan, että yhteys toimii.
+
+        $ sudo salt '*' test.ping
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/44deabf6-17ef-4f8f-9afa-f2d0aa08486a)
+
+Kaikki näyttää olevan kunnossa. Seuraavassa tehtävässä käytän samoja koneita komentojen ajamiseen verkon yli.
+
+## e) Aja useita idempotentteja (state.single) komentoja verkon yli
 
 
