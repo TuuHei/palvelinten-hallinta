@@ -117,12 +117,12 @@ Lähdin testaamaan tätä ohjeilla, jotka löytyvät näiltä sivulta: https://t
 
 Koska käytän Windowsia, niin tiedoston tekeminen ja sen täyttäminen valmiilla Vagrantfile pohjalla eroaa ohjeista. Ensimmäiseksi yritin netistä katsoa miten tehdä tekstitiedosto CMD:n kautta. Löysin ohjeen, josta löytyi komennot:
 
-        notepad filename.extension
-        notepad SampleDoc.txt
+    notepad filename.extension
+    notepad SampleDoc.txt
 
 Testasin PowerShellissä 
       
-        notepad Vagrantfile
+    notepad Vagrantfile
 
 Sain luotua uuden tekstitiedoston, johon kopioin valmiin Vagrantfile pohjan, joka löytyy aikaisemmin mainitulla linkillä.
 
@@ -130,7 +130,7 @@ Sain luotua uuden tekstitiedoston, johon kopioin valmiin Vagrantfile pohjan, jok
 
 Seuraavaksi jatkoin annetuilla ohjeilla, eli
 
-        vagrant up
+    vagrant up
 
 Kaikki sujui hyvin ja sain virtuaalikoneet tehtyä.
 
@@ -138,19 +138,19 @@ Kaikki sujui hyvin ja sain virtuaalikoneet tehtyä.
 
 Seuraavaksi otetaan ssh yhteys masteriin.
 
-        vagrant ssh tmaster
+    vagrant ssh tmaster
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/bdae34b8-3ca4-4a62-8fa2-6c44ca2bfd24)
 
 Hyväksytään orjakoneiden avaimet.
 
-        $ sudo salt-key -A
+    $ sudo salt-key -A
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/66e8e21c-b10f-49c6-9039-72f02922ab0b)
 
 Ja kokeillaan, että yhteys toimii.
 
-        $ sudo salt '*' test.ping
+    $ sudo salt '*' test.ping
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/44deabf6-17ef-4f8f-9afa-f2d0aa08486a)
 
@@ -158,4 +158,6 @@ Kaikki näyttää olevan kunnossa. Seuraavassa tehtävässä käytän samoja kon
 
 ## e) Aja useita idempotentteja (state.single) komentoja verkon yli
 
+Ensimmäisenä annoin komennon
 
+    $ sudo salt '*' state.single pkg.installed apache2
