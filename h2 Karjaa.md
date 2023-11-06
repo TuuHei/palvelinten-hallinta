@@ -112,3 +112,34 @@ Molemmat ovat aktiivisia.
 Apuna käytin: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/
 
 ## d) Asenna Saltin herra-orja arkkitehtuuri toimimaan verkon yli
+
+Lähdin testaamaan tätä ohjeilla, jotka löytyvät näiltä sivulta: https://terokarvinen.com/2023/salt-vagrant/
+
+Koska käytän Windowsia, niin tiedoston tekeminen ja sen täyttäminen valmiilla Vagrantfile pohjalla eroaa ohjeista. Ensimmäiseksi yritin netistä katsoa miten tehdä tekstitiedosto CMD:n kautta. Löysin ohjeen, josta löytyi komennot:
+
+        notepad filename.extension
+        notepad SampleDoc.txt
+
+Testasin PowerShellissä 
+      
+        notepad Vagrantfile
+
+Sain luotua uuden tekstitiedoston, johon kopioin valmiin Vagrantfile pohjan, joka löytyy aikaisemmin mainitulla linkillä.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/61062cce-baf7-44d8-85e7-8a3954fca2a4)
+
+Seuraavaksi jatkoin annetuilla ohjeilla, eli
+
+        $ vagrant up
+
+Kaikki sujui hyvin ja sain virtuaalikoneet tehtyä.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/6f4383e9-d3aa-48b3-a4ba-9b5c3591d258)
+
+Seuraavaksi otetaan ssh yhteys masteriin.
+
+        $ vagrant ssh tmaster
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/bdae34b8-3ca4-4a62-8fa2-6c44ca2bfd24)
+
+
