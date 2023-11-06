@@ -121,6 +121,8 @@ Koska käytän Windowsia, niin tiedoston tekeminen ja sen täyttäminen valmiill
     notepad filename.extension
     notepad SampleDoc.txt
 
+Lähde: https://techpp.com/2021/08/22/create-file-using-command-prompt-guide/
+
 Testasin PowerShellissä 
       
     notepad Vagrantfile
