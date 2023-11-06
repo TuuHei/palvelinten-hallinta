@@ -127,7 +127,7 @@ Testasin PowerShellissä
       
     notepad Vagrantfile
 
-Sain luotua uuden tekstitiedoston, johon kopioin valmiin Vagrantfile pohjan, joka löytyy aikaisemmin mainitulla linkillä . (Karvinen 2023)
+Sain luotua uuden tekstitiedoston, johon kopioin valmiin Vagrantfile pohjan, joka löytyy tehtävän alussa mainitusta linkistä.
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/61062cce-baf7-44d8-85e7-8a3954fca2a4)
 
