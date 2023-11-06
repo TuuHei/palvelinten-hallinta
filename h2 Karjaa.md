@@ -172,5 +172,53 @@ Kummallakaan koneella niitä ei ollut vielä asennettuna, joten asennus tehtiin.
 
     $ sudo salt '*' state.single pkg.installed apache2
 
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/6c19809e-c276-41e6-83e7-c188165ae097)
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/3aef6369-bae7-4638-bf93-78657619a4c9)
+
+Kummassakaan koneessa ei muutoksia. Idempotentti saavutettu.
+
+Seuraavaksi teen samanlaisen testin, mutta nyt apache2 pitää olla käynnissä.
+
+    $ sudo salt '*' state.single service.running apache2
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/98cc15f8-439a-4c6f-86eb-9a6f27bd0dda)
+
+Muutoksia ei tarvittu tehtä. Minä en kuitenkaan halua, että ne ovat päällä.
+
+     $ sudo salt '*' state.single service.dead apache2 
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/9f99fe37-2cfa-411c-adcc-711c6e365337)
+
+Tila muuttui. Tehdään sama uudestaan, jotta saavutettaisiin idempotentti.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/936ace1c-07f6-4184-9b58-08bed847886b)
+
+Ei muutoksia.
+
+## f) Kerää teknistä tietoa orjista verkon yli (grains.item)
+
+Testataan aluksi, että saan komennot toimimaan. Otin viime viikon tehtävästä komennon ja muokkasin sitä tähän tehtävään sopivaksi.
+
+    $ sudo salt-call --local grains.item osfinger
+    $ sudo salt '*' grains.item osfinger
+
+Näytti toimivan, sillä sain vastaukseksi: 
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/4e78149b-36f9-4c54-9876-a2babc82cd22)
+
+Testataan vielä vaikka tietoa kernelistä.
+
+    $ sudo salt '*' grains.item kernel kernelrelease
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/e4cbe6b7-f10e-4384-85bc-0e6b5484401a)
+
+Lähteet: https://terokarvinen.com/2023/configuration-management-2023-autumn/
+
+https://terokarvinen.com/2023/salt-vagrant/
+
+## g) Aja shell-komento orjalla verkon yli
 
 
+
+    
