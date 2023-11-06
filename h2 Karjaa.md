@@ -116,7 +116,7 @@ Apuna käytin: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-a
 
 Lähdin testaamaan tätä ohjeilla, jotka löytyvät näiltä sivulta: https://terokarvinen.com/2023/salt-vagrant/
 
-Koska käytän Windowsia, niin tiedoston tekeminen ja sen täyttäminen valmiilla Vagrantfile pohjalla eroaa ohjeista. Ensimmäiseksi yritin netistä katsoa miten tehdä tekstitiedosto CMD:n kautta. Löysin ohjeen, josta löytyi komennot:
+Koska käytän Windowsia, niin tiedoston tekeminen ja sen täyttäminen valmiilla Vagrantfile pohjalla eroaa ohjeista. Ensimmäiseksi yritin netistä katsoa miten tehdä tekstitiedosto PowerShellin kautta. Löysin ohjeen, josta löytyi komennot:
 
     notepad filename.extension
     notepad SampleDoc.txt
