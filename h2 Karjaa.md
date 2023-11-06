@@ -259,3 +259,18 @@ Laitoin tiedoston samaksi mikä luotiin aikaisemmin, joten jos tiedosto tehtiin 
 
 Muutoksia ei tullut.
     
+Lähteet: 
+
+https://devops.stackexchange.com/questions/653/what-is-the-definition-of-cattle-not-pets#654
+
+https://terokarvinen.com/2017/04/11/vagrant-revisited-install-boot-new-virtual-machine-in-31-seconds/
+
+https://terokarvinen.com/2023/salt-vagrant/
+
+https://developer.hashicorp.com/vagrant/downloads
+
+https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/
+
+https://techpp.com/2021/08/22/create-file-using-command-prompt-guide/
+
+https://terokarvinen.com/2023/configuration-management-2023-autumn/
