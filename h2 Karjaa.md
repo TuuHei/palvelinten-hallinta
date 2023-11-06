@@ -219,6 +219,38 @@ https://terokarvinen.com/2023/salt-vagrant/
 
 ## g) Aja shell-komento orjalla verkon yli
 
+Lähden testaamaan tekemällä orjakoneisiin yksinkertaiset tiedostot.
 
+    $ sudo salt '*' state.single cmd.run 'cat > stesti.txt'
 
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/685d12e8-4fa9-4e7c-8457-82dbf38e8c9f)
+
+Lähteet: https://terokarvinen.com/2023/salt-vagrant/
+
+## h) Hello, IaC
+
+Lähdin seuraamaan https://terokarvinen.com/2023/salt-vagrant/ sivulla annettua ohjetta "Infra as Code - Your wishes as a text file". Aluksi luon hakemiston, ja sinne .sls tiedoston.
+
+    $ sudo mkdir -p /srv/salt/hello
+    $ sudoedit /srv/salt/hello/init.sls
+
+Kopioin ohjeista init.sls tiedoston sisällön ja liitän ne omaan tiedostoon.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/de8dd3fa-bc6c-41f4-a8c6-f42bd894645b)
+
+Seuraavaksi ajoin tiedoston.
+
+    $ sudo salt '*' state.apply hello
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/8ad5bd31-c243-47d4-9b9d-604546a6d913)
+
+Tarkastetaan, että tiedostot löytyvät.
+
+    $ sudo salt '*' state.single file.managed '/tmp/infra-as-code'
+
+Laitoin tiedoston samaksi mikä luotiin aikaisemmin, joten jos tiedosto tehtiin muutoksia ei pitäisi tulla.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/140d6a8e-d436-49b0-a0d2-3ccd79cae20a)
+
+Muutoksia ei tullut.
     
