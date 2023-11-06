@@ -161,3 +161,16 @@ Kaikki näyttää olevan kunnossa. Seuraavassa tehtävässä käytän samoja kon
 Ensimmäisenä annoin komennon
 
     $ sudo salt '*' state.single pkg.installed apache2
+
+Eli apache2 pitää olla asennettuna. 
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/7311ec10-48ab-4004-b19c-49160e76f753)
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/71d3796a-70ef-4483-aa3b-aa47a5eb0e3c)
+
+Kummallakaan koneella niitä ei ollut vielä asennettuna, joten asennus tehtiin. Jos ajan saman komennon uudestaan, niin muutoksia ei pitäisi enään tulla, joten idempotentti pitäisi olla saavutettuna.
+
+    $ sudo salt '*' state.single pkg.installed apache2
+
+
+
