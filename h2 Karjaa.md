@@ -18,8 +18,9 @@ Lähde: https://terokarvinen.com/2017/04/11/vagrant-revisited-install-boot-new-v
 
 **Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves**
 
-* Tutoriaali kolmen virtuaalikoneen hallintaan.
-* 
+* Tutoriaali kolmen virtuaalikoneen luomiseen.
+* Ohjeessa luodaan yksi master ja kaksi orjaa.
+* Ohjeesta löytyy myös komennot niiden ohjaamiseen.
 
 Lähde: https://terokarvinen.com/2023/salt-vagrant/
 
