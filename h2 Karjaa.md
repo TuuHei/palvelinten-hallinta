@@ -42,7 +42,7 @@ Ensin luodaan virtuaalikone.
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ee979c87-3411-425f-b7b3-6091bbe8702a)
 
-Varmistetaan että VagrantFile on luotu.
+Varmistetaan että Vagrantfile on luotu.
 
     dir
 
