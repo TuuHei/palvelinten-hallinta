@@ -15,3 +15,19 @@ Aloitan luomalla Debianin puolella avainparin, jotta voin antaa julkisen avaimen
     $ ssh-keygen
 
 <img width="381" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/f9acc025-5e19-48ac-ac60-428f51c3a2fb">
+
+Haetaan avain 
+
+        $ cat $HOME/.ssh/id_rsa.pub
+
+<img width="400" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/7be4915a-16da-4085-8154-c08fa940368c">
+
+Ja annetaan se GitHubiin.
+
+Setttings --> 
+
+<img width="272" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/7c194731-26e6-4e4d-b9be-37329bb2d7c2">
+
+
+
+
