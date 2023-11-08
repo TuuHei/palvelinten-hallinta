@@ -10,3 +10,8 @@ Näillä tiedoilla se on valmis luotavaksi.
 
 ## b) Dolly. Kloonaa edellisessä kohdassa tehty uusi varasto itsellesi, tee muutoksia, puske ne palvelimelle, ja näytä, että ne ilmestyvät weppiliittymään.
 
+Aloitan luomalla Debianin puolella avainparin, jotta voin antaa julkisen avaimen GitHubiin.
+
+    $ ssh-keygen
+
+<img width="381" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/f9acc025-5e19-48ac-ac60-428f51c3a2fb">
