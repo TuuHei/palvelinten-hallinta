@@ -67,7 +67,7 @@ Kun muutokset on tehty, niin annoin komennot samassa järjestyksessä kuin ohjei
         $ git commit
         $ git pull
         $ git push
-        $git log --patch
+        $ git log --patch
 
 <img width="394" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/de3fe2e6-5c9b-4ac3-af76-f95949d3bf8e">
 
@@ -76,4 +76,6 @@ Ja GitHub näyttää tältä
 <img width="308" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/0f0fba1d-7c0f-439c-88e3-ea1829c8954a">
 
 Muutokset siis onnistuivat.
+
+## c) Doh! Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset --hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.
 
