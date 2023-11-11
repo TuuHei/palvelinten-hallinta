@@ -79,3 +79,27 @@ Muutokset siis onnistuivat.
 
 ## c) Doh! Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset --hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.
 
+Aloitin tekemällä uuden tiedoston /winter-tasks hakemistoon. Tyhmänä muutoksena tein normaalin tekstitiedoston, jonne kirjoitin salasanan ja toisen tiedoston nimeltä paivakirja.txt
+
+    $ nano paivakirja.txt
+    $ nano salasanat.txt
+    $ cat salasanat.txt
+
+<img width="310" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/4f0d161d-8d68-44d2-b417-d5d6dc0be19f">
+
+Seuraavaksi valmistelen niiden lähettämistä gittiin.
+
+    $ git pull
+    $ git add .
+
+Nyt kuitenkin tajuan virheeni, ja haluan poistaa tekemäni muutokset.
+
+    $ git reset --hard
+
+<img width="298" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/52693fc3-84d4-4bde-9cd2-cf34aaa80ad5">
+
+Tiedostot ovat poistuneet.
+
+
+
+
