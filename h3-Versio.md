@@ -100,6 +100,14 @@ Nyt kuitenkin tajuan virheeni, ja haluan poistaa tekemäni muutokset.
 
 Tiedostot ovat poistuneet.
 
+## d) Tukki. Tarkastele ja selitä varastosi lokia. Tarkista, että nimesi ja sähköpostiosoitteesi näkyy haluamallasi tavalla ja korjaa tarvittaessa.
 
+Pääsen katsomaan logeja komennolla 
 
+    $ git log --patch
 
+<img width="286" alt="image" src="https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/9b9527ee-7c6a-4e11-a88d-04ce46c0e902">
+
+Kahta viimeistä tehtävää tehdessäni olen jo kolmatta päivää kuumeessa, sekä 3 tunnin yöunilla, joten analysoinnista ei valitettavasti tule yhtään mitään.
+
+Mallia tehtäviin otin: https://terokarvinen.com/2023/configuration-management-2023-autumn/
