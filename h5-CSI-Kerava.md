@@ -7,7 +7,7 @@
   * %T+ viittaa muokkausaikaan.
   * %p tiedoston nimi ja hakemistopolku
   * \n uutta riviä
-- 
+- Voit myös löytää graafisessa käyttöliittymässä tehdyt muutokset samalla komennolla.
 
 Lähde: https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/
 
@@ -17,7 +17,7 @@ Testasin ensiksi alla olevaa komentoa kotihakemistossa.
 
     $ find -printf '%T+ %p\n'|sort
 
-'find' komentoa käytetään tiedostojen etsimisessä. Se näyttää nykyisessä hakemistossa olevat tiedostot. '-printf '%T+ %p\n'|sort' komennolla voidaan vielä määrittää lisäarvoja. '%T+' näyttää päivämäärän ja ajan, sekä '+' erottaa ne + merkillä. '%p\n' kertoo tiedoston nimen sekä hakemistopolun, ja tekee uuden rivin jokaiselle tiedostolle. '|sort' lajittelee listan aikajärjestykseen. Lähde: 'find' komennon man-sivut.
+'find' komentoa käytetään tiedostojen etsimisessä. Se näyttää nykyisessä hakemistossa olevat tiedostot. '-printf '%T+ %p\n'|sort' komennolla voidaan vielä määrittää lisäarvoja. '%T+' näyttää päivämäärän ja ajan, sekä '+' erottaa ne + merkillä. '%p\n' kertoo tiedoston nimen sekä hakemistopolun, ja tekee uuden rivin jokaiselle tiedostolle. '|sort' lajittelee listan aikajärjestykseen. Lähde: 'find' komennon man-sivut ja https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/.
 
 Kuva komennon testailusta kotihakemistossa:
 
@@ -63,7 +63,7 @@ Siinä yksinkertainen skripti. Nyt testataan, että kaikki toimii.
 
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/29fa8765-8ebc-4455-8827-746139b1291d)
 
-Hyvältä näyttää! Seuraavaksi kopioidaan tiedosto /usr/local/bin/ hakemistoon, jotta komennon saa käyttöön kiakilla käyttäjillä, ja katsotaan onko oikeudet kunnossa.
+Hyvältä näyttää! Seuraavaksi kopioidaan tiedosto /usr/local/bin/ hakemistoon, jotta komennon saa käyttöön kaikilla käyttäjillä, ja katsotaan onko oikeudet kunnossa.
 
     $ cd /usr/local/bin/
     $ sudo cp /home/vagrant/morning.sh /usr/local/bin/
@@ -159,3 +159,48 @@ Kaikki vaiheet näyttivät onnistuvan. Seuraavaksi testataan näkyykö muutokset
 ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/8f582eed-3299-4686-a743-646651d31da4)
 
 Näyttäisi toimivan.
+
+## e) Ämpärillinen. Tee Salt-tila, joka asentaa järjestelmään kansiollisen komentoja.
+
+Aloitan tekemällä uuden hakemiston ja lisään sinne kolme tiedostoa. 
+
+        $ cd /srv/salt/
+        $ sudo mkdir ämpäri
+        $ cd ämpäri/
+        $ sudo touch pmvt kissa koira
+
+Seuraavaksi käyn kirjoittamassa tiedostoille hieman sisältöä
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/58c4e7f3-3f9d-4089-be55-b4d40c2eaccb)
+
+(Mielipiteet ovat omiani, sekä tuli typo pmvt kohdassa, piti olla pvmt, mutta mennään eteenpäin nyt tuolla)
+
+Seuraavaksi tehdään init tiedosto, jonka avulla voidaan asentaa tiedostot orjakoneille.
+
+        $ sudoedit init.sls
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/66fcc616-9f8d-4aec-85f8-ffe9ebc4e608)
+
+Testataan vielä lopuksi että se toimii.
+
+      $ sudo salt '*' state.apply ämpäri
+
+  ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/16c917c9-eb37-420b-80ba-ab050c1ab957)
+
+Asentaminen onnistui. Viimeiseksi testataan toimivuus.
+
+      $ sudo salt '*' cmd.run koira
+      $ sudo salt '*' cmd.run kissa
+      $ sudo salt '*' cmd.run pmvt
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/2d01181b-1b70-4df2-92d7-c17a1b3f3d0f)
+
+Hyvältä näyttää.
+
+Lähteet:
+
+https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/
+
+https://terokarvinen.com/2023/configuration-management-2023-autumn/
+
+https://docs.saltproject.io/en/latest/ref/states/all/salt.states.file.html
