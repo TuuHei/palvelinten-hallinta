@@ -118,5 +118,44 @@ Apua init tiedostoa varten hain: https://docs.saltproject.io/en/latest/ref/state
 
 ## d) Apassi. Tee Salt-tila, joka asentaa Apachen näyttämään kotihakemistoja
 
- 
+Lähden seuraamaan ohjeita Tero Karvisen **Apache User Homepages Automatically – Salt Package-File-Service Example** mukaan. Lähde: https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/
 
+ Aloitan luomalla /srv/salt hakemistoon apache hakemiston.
+
+     $ cd /srv/salt
+     $ sudo mkdir apache
+
+ ![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/5cad8998-6d53-432e-b403-80a05cfd05de)
+
+Sekä luon sinne init.sls tiedoston.
+
+    $ cd apache
+    $ sudoedit init.sls
+
+Init tiedostoon kopioin ohjeista kohdan **Better Way with Files** tiedoston sisällön.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/2e78bfa5-7f44-4097-96f2-40cb78d9a92f)
+
+Tässä vaiheessa on hyvä tehdä muokkaukset kotisivuun. Koska laitoin init tiedostoon lähteeksi "salt://apache/default-index.html" niin teen saman nimisen tiedoston /srv/salt/apache hakemistoon.
+
+    $ sudo nano default-index.html
+    $ cat default-index.html
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/8610fa05-91fa-42c4-87d0-cde8f6a92056)
+
+Seuraavaksi ajetaan muutokset.
+
+    $ sudo salt '*' state.apply apache
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/e596614c-d5a8-49d1-9aa9-2923b4622b93)
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/a7fae0b5-124a-41e7-8621-e7d7f19f3abd)
+
+Kaikki vaiheet näyttivät onnistuvan. Seuraavaksi testataan näkyykö muutokset. Teen testin jo aikaisemmin minulle tutulla tavalla, eli w3m selaimella, joka toimii komentokehotteen kautta.
+
+    $ sudo apt install w3m
+    $ w3m http://localhost
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/8f582eed-3299-4686-a743-646651d31da4)
+
+Näyttäisi toimivan.
