@@ -26,3 +26,62 @@ Lähde: https://github.com/therealhalonen/PhishSticks/blob/master/notes/ollikain
 * 
 
 Lähde: https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html
+
+## a) Asenna Windows virtuaalikoneeseen
+
+Koska aikaisemmassa tehtävässä **Halonen, Rajala ja Ollikainen 2023: Installing Windows 10 on a virtual machine** oli tullut niin hyvät ohjeet, niin lähdin tekemään tehtävää sen avulla.
+
+Ensimmäisenä lataan Windows 10 ISO English (Great Britain) 64-bittisen tiedoston virtualboxia varten. Seuraavaksi lähden muokkaamaan virtuaalikoneelle oikeat asetukset. 
+
+Valitaan ladattu ISO tiedosto, sekä Windows versio.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/5330ab66-03b6-4cb8-a517-c66e8fd20b5d)
+
+Valitsin 10GB RAM muistia, sekä 4 prosessoria.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/d05b4a75-a83d-44f7-97d1-a2eddf0a2a33)
+
+Lopuksi vielä varmuuden vuoksi 50GB kovalevytilaa ja muihin asetuksiin en koskenut.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/abb0463b-58a6-4944-9272-743c75272a94)
+
+Seuraavaksi lähden käynnistämään uutta virtuaalikonetta ja pääsen asennusvaiheeseen. Ensin valitaan kieliasetukset halutuksi, jonka jälkeen tuli Install now näkymä.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/62206974-e612-412c-b739-5ca109dc841a)
+
+Lisenssivaiheen hyväksyin ja nyt valitaan asennustapa. Mennään Custom asetuksella, ja valitaan virtuaalikoneelle annettu 50GB kovalevy.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/29192445-0d92-4f46-808b-b36103313721)
+
+Ja nyt annetaan sen asennella rauhassa, jonka jälkeen virtuaalikone käynnistyy uudelleen.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/ee2c412e-eb11-48ef-bf40-cfc0a6762d76)
+
+Sitten päästään vielä vastailemaan kysymyksiin ja luomaan käyttäjä. Valitaan, että olen Suomesta, jonka jälkeen näppäimistön asetukset. Sekin Suomi.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/e771c468-0375-4b27-a065-a79a712b85b9)
+
+Nyt pyydetään kirjautumaan sisään. Vasemmassa alakulmassa on "Domain join instead". Painetaan sitä ja valitaan käyttäjälle jokin nimi ja turvallinen salasana.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/e8f2e840-08f8-47fe-8d23-a67847d2be74)
+
+Pääsin vielä päättämään haluanko jakaa sijaintini ja muuta turhaa. Kaikkiin Ei.
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/473ef23e-cae0-42e1-b511-93f25be016d9)
+
+Ja näin minulla on Windows 10 virtuaalikoneella.
+
+## b) Asenna Salt Windowsille. Osoita 'salt-call --local' komentoa ajamalla, että asennus on onnistunut
+
+
+
+
+
+
+
+
+
+
+
+
+
