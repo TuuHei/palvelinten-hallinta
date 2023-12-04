@@ -73,6 +73,29 @@ Ja näin minulla on Windows 10 virtuaalikoneella.
 
 ## b) Asenna Salt Windowsille. Osoita 'salt-call --local' komentoa ajamalla, että asennus on onnistunut
 
+Teen testit viime tehtävässä asennetulla virtuaalikoneella.
+
+Menin osoitteeseen: https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/windows.html#install-windows , josta valitsin tiedoston **Windows downloads** alta. Sieltä sain .exe tiedoston, jolla voin asentaa saltin.
+
+Jatkoin eteenpäin oletusasetuksilla ja painoin 'Install', jonka jälkeen 'Start salt-minion'
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/e8c966be-5a89-4116-92b9-5c33980839ed)
+
+Varmistetaan vielä, että asennus on onnistunut.
+
+    salt-call --local --version
+
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/0bc73efb-46ec-422d-acd1-6301b872823d)
+    
+## c) Kerää Windows-koneesta tietoa grains.items -toiminnolla.
+
+
+
+
+
+
+
+
 
 
 
