@@ -14,7 +14,7 @@ Tiedosto näyttäisi olevan **./.config/xfce4/xfcong/xfce-perchannel-xml/xsettin
 
     $ nano ./.config/xfce4/xfcong/xfce-perchannel-xml/xsettings.xml
 
-![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/6295dda1-0861-405a-aacf-8ff6f3bf41e5)
+![kuva](https://github.com/TuuHei/palvelinten-hallinta/assets/122973223/2e30f51b-62af-4469-8566-dfb948f8c858)
 
 Tässä tiedosto kaikessa kauneudessaan. Tiedostosta näkee samalla rivillä "ThemeName" sekä nykyinen käytössä oleva teema "Adwaita-dark". Tarkoituksena olisi siis luoda komento, joka tunnistaa nykyisen teeman ja pystyy muokkaamaan sen haluttuun teemaan. 
 
@@ -72,17 +72,10 @@ Ja lopuksi vielä **Adwaita** teema.
 
 Ainakin toimivat...
 
-
-
-
-
-
-
-
-
-
-
-
 ## Lähteet
 
 https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/
+
+https://wiki.archlinux.org/title/xfce
+
+https://github.com/TuuHei/palvelinten-hallinta/blob/main/h5-CSI-Kerava.md
