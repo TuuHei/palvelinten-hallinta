@@ -1,3 +1,5 @@
+## Komento teemojen vaihtamiseen Debianilla
+
 Tämän modulin tarkoituksena on lähteä yrittämään tekemään komentoa, jolla voi muokata Debian virtuaalikoneen teemaa.
 
 Aloitan etsimällä tiedoston, joka on vastuussa teeman muokkaamisessa. Käytän apuna aiempaa raporttiani [h5-CSI-Kerava.md](https://github.com/TuuHei/palvelinten-hallinta/blob/main/h5-CSI-Kerava.md). Kävin muokkaamassa teemaa, jonka jälkeen katsoin komennolla mitä tiedostoa muokattiin.
